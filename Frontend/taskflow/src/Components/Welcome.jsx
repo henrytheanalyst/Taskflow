@@ -3,7 +3,7 @@ import './Welcome.css'
 function Welcome(){
     const [openForm,setOpenForm]=useState(false);
     const [title,setTitle]=useState("");
-    const [description,setDesciption]=useState("");
+    const [description,setDescription]=useState("");
     const [date,setDate]=useState("");
     const [status,setStatus]=useState("todo");
      function handleSubmit(e){
@@ -26,16 +26,34 @@ function Welcome(){
                         <h2>Add a new Task</h2>
                         <div className="form-group">
                             <label>Task Title</label>
-                            <input type="text" placeholder='What needs to be done?' onChange={(e)=>setTitle(e.target.value)} />
+                            <input 
+                                type="text" 
+                                placeholder='What needs to be done?'
+                                value={title} 
+                                required
+                                onChange={(e)=>setTitle(e.target.value)} 
+                            />
                         </div>
                         <div className="form-group">
                             <label>Description</label>
-                            <textarea  cols="30" rows="10" placeholder='Add a few dateils about this task' onChange={(e)=>setDesciption(e.target.value)}></textarea>
+                            <textarea 
+                                 cols="30" 
+                                 rows="10" 
+                                 placeholder='Add a few dateils about this task'
+                                 required
+                                 value={description}
+                                 onChange={(e)=>setDescription(e.target.value)}
+                            ></textarea>
                         </div>
                         <div className="date-status">
                             <div className="date-input">
                                 <label>Due Date</label>
-                                <input type="date" onChange={(e)=>setDate(e.target.value)}/>
+                                <input 
+                                    type="date" 
+                                    value={date}
+                                    required
+                                    onChange={(e)=>setDate(e.target.value)}
+                                />
                             </div>
                            <div className="status-input">
                              <label>Status</label>
