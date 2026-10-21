@@ -6,7 +6,9 @@ function Welcome(){
     const [description,setDesciption]=useState("");
     const [date,setDate]=useState("");
     const [status,setStatus]=useState("todo");
-    
+     function handleSubmit(e){
+        e.preventDefault();
+     }
     return(
         <section className="eyes">
             <div className="eyebrow">
@@ -14,10 +16,13 @@ function Welcome(){
                 <h2 className='subtitle'>My Tasks</h2>
                 <p>Stay focused and keep your work moving forward</p>
             </div>
-            <button className='addtaskbtn' onClick={()=>setOpenForm(!openForm)}><i className="ri-add-line"></i>Add Task</button>
+            <button className='addtaskbtn' onClick={()=>setOpenForm(!openForm)} type='button'><i className="ri-add-line"></i>Add Task</button>
             {openForm && (
                     <div className="open-area" onClick={()=>setOpenForm(false)} >
-                    <form action="" className="form" onSubmit={handleSubmit}>
+                    <form 
+                        className="form" 
+                        onSubmit={handleSubmit} 
+                        onClick={(e)=>e.stopPropagation()}>
                         <h2>Add a new Task</h2>
                         <div className="form-group">
                             <label>Task Title</label>
@@ -41,7 +46,11 @@ function Welcome(){
                                 </select>
                         </div>
                        
-                    </div>
+                        </div>
+                        <div className="btns">
+                            <button className='cancel-btn' type='button' onClick={()=>setOpenForm(false)}>Cancel</button>
+                             <button type='submit' className='save-btn'>Save</button>
+                        </div>
                     </form>
                     
                 </div>
