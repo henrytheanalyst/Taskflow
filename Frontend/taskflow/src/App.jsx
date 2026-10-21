@@ -1,6 +1,9 @@
+import Header from "./Components/Header";
 function App(){
   return(
-    <h1>Hello Boss</h1>
+    <main>
+    <Header/>
+    </main>
   );
 }
 export default App;

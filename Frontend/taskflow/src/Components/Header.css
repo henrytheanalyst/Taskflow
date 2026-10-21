@@ -1,0 +1,51 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #899499;
+}
+.left-side-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo{
+    background: #4169E1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+}
+.left-side-header h1{
+    font-size: 22px;
+}
+.right-side-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.avatar{
+    background: #008080;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+.name-email h2{
+   font-size: 18px;
+}
+.name-email p{
+    font-size: 14px;
+    font-weight: 500;
+    color:#708090 ;
+}
