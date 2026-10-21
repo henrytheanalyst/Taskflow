@@ -40,3 +40,46 @@
  background: #545AA7;
     
 }
+.open-area{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.13);
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.form{
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+}
+.form h2{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-group label{
+    font-size: 22px;
+    font-weight: bold;
+}
+.form-group input{
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #708090;
+    font-size: 19px;
+    font-weight: bold;
+}
+.form-group input::placeholder{
+    font-size: 14px;
+}
+.form-group input:focus{
+    outline: none;
+    border: 1px solid #7FFFD4;
+}
