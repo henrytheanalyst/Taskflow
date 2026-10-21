@@ -5,39 +5,86 @@
     padding: 0 40px;
 }
 .card{
-    border: 1px solid gray;
-    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    padding: 22px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    box-shadow: 0 3px 12px rgba(30,50, 80, 0.04);
+    transition: box-shadow 0.2s ease ,transform 0.2s ease;
+}
+.card:hover{
+    box-shadow: 0 6px 18px rgba(30, 50, 80, 0.08);
+    transform: translateY(-2px);
+}
+.card-info h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #708090;
+    margin-bottom: 12px;
+}
+.card-info h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #243047;
 }
 .card-label{
-    background: #B9D9EB;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    background:#e5f0ff;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 19px;
-    color: green;
+    font-size: 20px;
+    color: #005a9c;
+}
+.gray-color,
+.yellow-color,
+.green-color{
+     width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 50%;
 }
 .gray-color{
-     background: gray;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+     background: #899499
 }
 .yellow-color{
-   background: yellow;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%; 
+   background: #e9ad24;
+
 }
 .green-color{
-    background: green;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    background: #3cb371;
+}
+@media(max-width:900px) {
+    .cards{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (max-width:520px){
+    .cards{
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+        gap: 14px;
+    }
+    .eyes{
+        margin: 25px 20px;
+    }
+    .eyebrow .subtitle{
+        font-size: 25px;
+    }
+    .eyebrow p{
+        max-width: 240px;
+    }
+    .addtaskbtn{
+        padding: 10px 12px;
+        font-size: 14px;
+        flex-shrink: 0;
+    }
 }
