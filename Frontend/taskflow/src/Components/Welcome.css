@@ -1,0 +1,30 @@
+.eyes{
+ display:flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin-top: 30px;
+}
+.eyes .date{
+    font-size: 26px;
+    color:#3CB371;
+}
+.eyes .subtitle{
+    font-size: 32px;
+}
+.eyes p{
+color: hsl(199, 7%, 57%);
+}
+.addtaskbtn{
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #005A9C;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+.addtaskbtn:hover{
+ background: #545AA7;
+    
+}

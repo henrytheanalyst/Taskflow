@@ -1,0 +1,43 @@
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 20px;
+    padding: 0 40px;
+}
+.card{
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.card-label{
+    background: #B9D9EB;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    color: green;
+}
+.gray-color{
+     background: gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.yellow-color{
+   background: yellow;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+}
+.green-color{
+    background: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
